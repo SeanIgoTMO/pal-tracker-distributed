@@ -57,3 +57,15 @@ curl -i -XPOST -H"Content-Type: application/json" localhost:8084/time-entries/ -
 curl -i localhost:8084/time-entries?userId=1
 -> [{"id":1,"projectId":1,"userId":1,"date":"2015-05-17","hours":6,"info":"time entry info"}]
 
+
+Handing in:
+
+cd ~/workspace/assignment-submission
+./gradlew cloudNativeDeveloperDistributedSystemDeployment \
+    -PregistrationServerUrl=https://registration-pal-renzo-sean.apps.pikes.pal.pivotal.io \
+    -PbacklogServerUrl=https://backlog-pal-renzo-sean.apps.pikes.pal.pivotal.io \
+    -PallocationsServerUrl=https://allocations-pal-renzo-sean.apps.pikes.pal.pivotal.io \
+    -PtimesheetsServerUrl=https://timesheets-pal-renzo-sean.apps.pikes.pal.pivotal.io
+
+
+
